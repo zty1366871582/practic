@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <style type="text/css">
+        .cur{
+            background-color: gold;
+        }
+        .contents div{
+            width: 500px;
+            height: 500px;
+            text-align: center;
+            background-color: yellow;
+            border: 1px solid red;
+            display: none;
+            line-height: 500px;
+        }
+        .show-div{
+            display: block!important;
+        }
+    </style>
+    <script type="text/javascript">
+       $(function () {
+           $('#btns input').click(function () {
+               $(this).addClass('cur').siblings().removeClass('cur');
+               $('#contents div').eq($(this).index()).addClass('show-div').siblings().removeClass('show-div');
+           });
+
+       })
+    </script>
+</head>
+<body>
+        <div class="btns" id="btns">
+            <input class="cur" type="button" value="tab1">
+            <input type="button" value="tab1">
+            <input type="button" value="tab1">
+
+        </div>
+
+        <div class="contents" id="contents">
+            <div class="show-div">tab1的内容</div>
+            <div>tab2的内容</div>
+            <div>tab3的内容</div>
+
+        </div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/bootstrap.js"></script>
+    <style type="text/css">
+	*{
+	padding:0;
+    margin:0;
+    border:none;
+}
+#news,#news1,#news2{
+    width:800px;
+    height:100px;
+    margin:20px auto;
+    background-color:#CCC;
+    border:#039 solid 1px;
+    overflow:hidden;/*这里必须设置哦，否则滚动会消失的，如果设置为scroll，更容易明白原理*/
+}
+#news li,#news1 li,#news2 li{
+    line-height:30px;
+}
+	</style>
+<script type="text/javascript">
+	onload = function(){	
+	//这是第一个滚动
+			var n=document.getElementById("news");
+			var p1=document.getElementById("p1");
+			var p2=document.getElementById("p2");
+			p2.innerHTML=p1.innerHTML;
+			//alert(n.offsetHeight+" 1  "+p1.offsetHeight);
+		var f=function(){
+			n.scrollTop++;
+			if(n.scrollTop>=p1.offsetHeight){
+			//alert(n.scrollTop+" 1  "+p1.offsetHeight);
+			n.scrollTop=0;
+			}
+		}
+	var i=setInterval(f,20);
+	
+	 n.onmouseover =function(){
+    clearInterval(i);
+	}
+	 n.onmouseout =function(){
+    i=setInterval(f,20);
+	}
+	//  end
+	//这是第二个滚动
+			var n1=document.getElementById("news1");
+			var p11=document.getElementById("p11");
+			var p21=document.getElementById("p21");
+			p21.innerHTML=p11.innerHTML;
+			//alert(n.offsetHeight+" 1  "+p1.offsetHeight);
+		var f1=function(){
+			n1.scrollTop++;
+			if(n1.scrollTop>=p11.offsetHeight){
+			//alert(n.scrollTop+" 1  "+p1.offsetHeight);
+			n1.scrollTop=0;
+			}
+		}
+	var i1=setInterval(f1,20);
+	
+	 n1.onmouseover =function(){
+    clearInterval(i1);
+	}
+	 n1.onmouseout =function(){
+    i1=setInterval(f1,20);
+	}
+	//  end
+	//这是第三个滚动
+			var n2=document.getElementById("news2");
+			var p12=document.getElementById("p12");
+			var p22=document.getElementById("p22");
+			p22.innerHTML=p12.innerHTML;
+			//alert(n.offsetHeight+" 1  "+p1.offsetHeight);
+		var f2=function(){
+			n2.scrollTop++;
+			if(n2.scrollTop>=p12.offsetHeight){
+			//alert(n.scrollTop+" 1  "+p1.offsetHeight);
+			n2.scrollTop=0;
+			}
+		}
+	var i2=setInterval(f2,20);
+	
+	 n2.onmouseover =function(){
+    clearInterval(i2);
+	}
+	 n2.onmouseout =function(){
+    i2=setInterval(f2,20);
+	}
+	//  end
+	}	
+</script>
+</head>
+<body>
+<div id="news" ">
+<ul id="p1">
+<li><a href="">1这是测试新闻滚动效果</a></li>
+<li><a href="">2这是测试新闻滚动效果</a></li>
+<li><a href="">3这是测试新闻滚动效果</a></li>
+<li><a href="">4这是测试新闻滚动效果</a></li>
+<li><a href="">5这是测试新闻滚动效果</a></li>
+<li><a href="">6这是测试新闻滚动效果</a></li>
+<li><a href="">7这是测试新闻滚动效果</a></li>
+<li><a href="">8这是测试新闻滚动效果</a></li>
+</ul>
+<ul id="p2">
+</ul>
+</div>
+<div>646446</div>
+<div id="news1" >
+	<ul id="p11">
+		<li><a href="">1这是测试新闻滚动效果</a></li>
+		<li><a href="">2这是测试新闻滚动效果</a></li>
+		<li><a href="">3这是测试新闻滚动效果</a></li>
+		<li><a href="">4这是测试新闻滚动效果</a></li>
+		<li><a href="">5这是测试新闻滚动效果</a></li>
+		<li><a href="">6这是测试新闻滚动效果</a></li>
+		<li><a href="">7这是测试新闻滚动效果</a></li>
+		<li><a href="">8这是测试新闻滚动效果</a></li>
+	</ul>
+<ul id="p21">
+</ul>
+</div>
+<div>46456</div>
+<div id="news2" >
+	<ul id="p12">
+		<li><a href="">1这是测试新闻滚动效果</a></li>
+		<li><a href="">2这是测试新闻滚动效果</a></li>
+		<li><a href="">3这是测试新闻滚动效果</a></li>
+		<li><a href="">4这是测试新闻滚动效果</a></li>
+		<li><a href="">5这是测试新闻滚动效果</a></li>
+		<li><a href="">6这是测试新闻滚动效果</a></li>
+		<li><a href="">7这是测试新闻滚动效果</a></li>
+		<li><a href="">8这是测试新闻滚动效果</a></li>
+	</ul>
+<ul id="p22">
+</ul>
+</div>
+</body>
+</html>

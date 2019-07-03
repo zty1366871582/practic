@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Jquery实现列表横向和纵向不间断滚动插件-前端人</title>
+<meta name="author" content="Jquery-School" />
+<meta name="Copyright" content="Jquery-School,www.jq-school.com" />
+<meta name="keywords" content="Jquery,Jquery资源,前端设计,div+css" />
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/jQuery-jcMarquee.js"></script>
+<style>
+<!-- 
+ul,li{list-style:none}
+#Marquee_x { overflow:hidden; width: 1003px; height:300px; } 
+#Marquee_x ul li ,#Marquee_x ul li div{ float:left;} /* 横向滚动必须让所有li左浮动 */
+#Marquee_y { overflow:hidden; height:500px; width:200px; } 
+-->
+</style>
+<script>
+$(function(){
+    $('#Marquee_x').jcMarquee({ 'marquee':'x','margin_right':'10px','speed':1 });
+	$('#Marquee_y').jcMarquee({ 'marquee':'y','margin_bottom':'10px','speed':5 });
+});
+</script>
+</head>
+<body>
+<div style="width: 1003px; margin: 50px auto;">
+ <h1>横向不间断滚动</h1>
+  <div id="Marquee_x">
+    <ul>
+      <li>
+        <div><div style=><img height="300" width="205" src="images/001.jpg" alt="001" /></div></div>
+        <div><img height="300" width="474" src="images/002.jpg" alt="002"/></div>
+        <div><img height="300" width="475" src="images/003.jpg" alt="003"/></div>
+        <div><img height="300" width="475" src="images/004.jpg" alt="004" /></div>
+        <div><img height="300" width="205" src="images/005.jpg" alt="001" /></div>
+        <div><img height="300" width="206" src="images/006.jpg" alt="002"/></div>
+        <div><img height="300" width="214" src="images/007.jpg" alt="003"/></div>
+        <div><img height="300" width="205" src="images/008.jpg" alt="004" /></div>
+        <div><img height="300" width="215" src="images/009.jpg" alt="004" /></div>
+      </li>
+    </ul>
+  </div>
+  <div style="clear:both;"></div>
+   <h1>纵向不间断滚动</h1>
+  <div id="Marquee_y">
+    <ul>
+      <li>
+        <div><img height="300" width="205" src="images/001.jpg" alt="001" /></div>
+        <div><img height="300" width="474" src="images/002.jpg" alt="002"/></div>
+        <div><img height="300" width="475" src="images/003.jpg" alt="003"/></div>
+        <div><img height="300" width="475" src="images/004.jpg" alt="004" /></div>
+        <div><img height="300" width="205" src="images/005.jpg" alt="001" /></div>
+        <div><img height="300" width="206" src="images/006.jpg" alt="002"/></div>
+        <div><img height="300" width="214" src="images/007.jpg" alt="003"/></div>
+        <div><img height="300" width="205" src="images/008.jpg" alt="004" /></div>
+        <div><img height="300" width="215" src="images/009.jpg" alt="004" /></div>
+      </li>
+    </ul>
+  </div>
+  <!-- 结束 -->
+  <div id="ps" style=" width:600px; float:left">
+    <h1>jQuery-jcMarquee插件
+      <p>by Riddick</p>
+    </h1>
+    <h2>关键语句</h2>
+    <dl>
+      <dt>* jQuery - jcMarquee v0.10</dt>
+      <dt>* Copyright(c) 2012 by Riddick-design </dt>
+      <dt>* Date: 2012-01-07</dt>
+      <dt>* 相关参数 </dt>
+      <dd><span>'marquee':'x',</span> \\ 设置滚动方向，提供 marquee:x 或 marquee:y</dd>
+      <dd><span>'margin_bottom':'0',</span> \\ 设置margin_bottom值</dd>
+      <dd><span>'margin_right':'0',</span> \\ 设置margin_right值</dd>
+      <dd><span>'speed':'10'</span> \\ 设置滚动速度,单位mm</dd>
+      <dt>* 重要提醒</dt>
+      <dd><span>#Marquee_x ul li { float:left;}</span> \\ 横向滚动时必须让所有li左浮动</dd>
+    </dl>
+  </div>
+</div>
+底部百度分享和googl广告：
+------------------------------------------------------------------
+<div class="baidu_share_tx_ys">
+<!-- Baidu Button BEGIN -->
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_t163" data-cmd="t163" title="分享到网易微博"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","t163"],"viewText":"分享到：","viewSize":"32"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":false}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bd../images.share.baidu.com/static/api/js/share.js?v=86326610.js?cdnversion='+~(-new Date()/36e5)];</script>
+<!-- Baidu Button END -->
+</div>
+<div class="goolge_tonglan">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 甸影520特效演示页728×90 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-9372860004509867"
+     data-ad-slot="5133129044"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</body>
+</html>
